@@ -11,5 +11,9 @@ def index():
 def user(name):
     return render_template('user.html', name=name)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return '<center><h1>Извините, страница не найдена!</h1></center>', 404
+
 if __name__ == "__main__":
     app.run(debug=True)
