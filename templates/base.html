@@ -1,4 +1,8 @@
 {% extends "bootstrap/base.html" %}
+{% block head %}
+<link rel="shortcut icon" href="{{url_for('static', filename='favicon.png')}}">
+{{super()}}
+{% endblock %}
 {% block navbar %}
 <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
